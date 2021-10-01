@@ -21,9 +21,11 @@ describe '#frequency_filter' do
     expect { frequency_filter([nil, 200], 100, 200)}.to raise_error 'input corrupted'
   end
 
-  # [], 100, 200 => raise error: 'no frequencies supplied'
-
   it 'raises error when frequency array is empty' do
     expect { frequency_filter([], 100, 200) }.to raise_error 'no frequencies supplied'
+  end
+
+  it 'uses default values to return changed array when no upper or lower limits are supplied' do
+    expect(frequency_filter([20, 1200])).to eq [40, 1000]
   end
 end

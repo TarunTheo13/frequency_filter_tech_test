@@ -13,7 +13,7 @@ Inputs => Outputs
 [450, 600, 120, 250, 300], 200, 500 => [450, 500, 200, 250, 300]
 [nil, 200], 100, 200 => raise error: 'input corrupted'
 [], 100, 200 => raise error: 'no frequencies supplied'
-[200, 300] => [200, 300] (upper and lower limits used default values)
+[20, 1200] => [40, 1000] (upper and lower limits used default values)
 
 ## Defaults
 
